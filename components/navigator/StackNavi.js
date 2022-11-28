@@ -27,7 +27,6 @@ export const JumpRopeStack = () => {
         },
       }}>
       <Stack.Screen name="JumpRopeScreen" component={JumpRopeScreen} />
-      <Stack.Screen name="HomeScreen" component={HomeScreen} />
     </Stack.Navigator>
   );
 };
@@ -35,6 +34,7 @@ export const JumpRopeStack = () => {
 export const MyRopesStack = () => {
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
+      <Stack.Screen name="HomeScreen" component={HomeScreen} />
       <Stack.Screen name="MyRopesScreen" component={MyRopesScreen} />
     </Stack.Navigator>
   );

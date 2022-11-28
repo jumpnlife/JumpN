@@ -1,5 +1,6 @@
 import {Button, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import {Counter} from '../redux/counter/Counter';
 
 export default function HomeScreen({navigation}) {
   const [count, setCount] = React.useState(0);
@@ -19,6 +20,7 @@ export default function HomeScreen({navigation}) {
           });
         }}
       />
+      <Counter />
     </View>
   );
 }
