@@ -1,10 +1,12 @@
 import {StyleSheet, Text, View, Button} from 'react-native';
 import React from 'react';
-
+import {useSelector} from 'react-redux';
+import {selectCount} from '../redux/counter/counterSlice';
 export default function MarketScreen({navigation}) {
+  const count = useSelector(selectCount);
   return (
     <View>
-      <Text>MarketScreen</Text>
+      <Text>MarketScreen---count:{count ? 'true' : 'false'}</Text>
       <Button
         title="Go to DetailsScreen"
         onPress={() =>

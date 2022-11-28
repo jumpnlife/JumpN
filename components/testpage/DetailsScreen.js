@@ -19,6 +19,10 @@ export default function DetailsScreen({route, navigation}) {
         }}
       />
       <Button
+        title="Go to Login"
+        onPress={() => navigation.navigate('LoginScreen')}
+      />
+      <Button
         title="Go to Home"
         onPress={() => navigation.navigate('HomeScreen')}
       />

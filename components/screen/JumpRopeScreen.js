@@ -139,7 +139,7 @@ export default function JumpRopeScreen() {
               borderRadius={25}
               width={250}
               onPress={() => {
-                console.log('Start Button ');
+                console.log('Start Button');
               }}>
               <Text fontSize="lg" color={'white'} bold>
                 Start
