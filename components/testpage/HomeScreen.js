@@ -16,7 +16,7 @@ export default function HomeScreen({navigation}) {
           navigation.navigate('DetailsScreen', {
             itemId: 86,
             otherParam: 'anything you want here',
-            testcs: 'testhello',
+            testcs: 'homescreen',
           });
         }}
       />

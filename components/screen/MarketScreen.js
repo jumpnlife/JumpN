@@ -29,7 +29,7 @@ export default function MarketScreen({navigation}) {
           navigation.navigate('DetailsScreen', {
             itemId: 86,
             otherParam: 'anything you want here',
-            testcs: 'testhello',
+            testcs: 'marketscreen',
           })
         }
       />
