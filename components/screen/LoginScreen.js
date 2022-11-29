@@ -1,7 +1,16 @@
 import React from 'react';
 import {Text, Button, Center, Box, Image} from 'native-base';
+import {useSelector, useDispatch} from 'react-redux';
+import {
+  loginState,
+  loginAction,
+  logoutAction,
+} from '../../redux/slice/loginSlice';
 
 export default function LoginScreen() {
+  const login = useSelector(loginState);
+  const dispatch = useDispatch();
+
   return (
     <Box bg="#7A67EE" h={1000}>
       <Center>
@@ -23,7 +32,8 @@ export default function LoginScreen() {
           borderRadius={25}
           width={280}
           onPress={() => {
-            console.log('Connect Wallet');
+            console.log('loginState', login);
+            dispatch(loginAction());
           }}>
           <Text fontSize="lg" color={'white'} bold>
             Connect Wallet

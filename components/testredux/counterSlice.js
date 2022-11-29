@@ -14,6 +14,10 @@ export const counterSlice = createSlice({
     decrement: state => {
       state.value -= 1;
     },
+    // 直接对actions解构拿到payload
+    // incrementByAmount: (state, {payload}) => {
+    //   state.value += payload;
+    // },
     incrementByAmount: (state, action) => {
       state.value += action.payload;
     },

@@ -1,12 +1,28 @@
 import {StyleSheet, Text, View, Button} from 'react-native';
 import React from 'react';
-import {useSelector} from 'react-redux';
-import {selectCount} from '../redux/counter/counterSlice';
+
+import {selectCount} from '../testredux/counterSlice';
+import {testState} from '../testredux/testSlice';
+import {
+  loginState,
+  loginAction,
+  logoutAction,
+} from '../../redux/slice/loginSlice';
+import {useSelector, useDispatch} from 'react-redux';
+
 export default function MarketScreen({navigation}) {
   const count = useSelector(selectCount);
+  const test = useSelector(testState);
+
+  const login = useSelector(loginState);
+  const dispatch = useDispatch();
+
   return (
     <View>
-      <Text>MarketScreen---count:{count ? 'true' : 'false'}</Text>
+      <Text>
+        MarketScreen---count:{count ? 'true' : 'false'}--test:{test}
+        --loginState:{login + ''}
+      </Text>
       <Button
         title="Go to DetailsScreen"
         onPress={() =>
@@ -17,8 +33,13 @@ export default function MarketScreen({navigation}) {
           })
         }
       />
+      <Button
+        title="Login OUT"
+        onPress={() => {
+          console.log('loginState', login);
+          dispatch(logoutAction());
+        }}
+      />
     </View>
   );
 }
-
-const styles = StyleSheet.create({});

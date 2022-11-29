@@ -1,6 +1,6 @@
 import {Button, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import {Counter} from '../redux/counter/Counter';
+import {Counter} from '../testredux/Counter';
 
 export default function HomeScreen({navigation}) {
   const [count, setCount] = React.useState(0);
